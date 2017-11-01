@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyMathPro</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <!-- header -->
+    <header id="site-header">
+        <div class="navbar navbar-inverse">
+            <a href="/" class="navbar-brand">
+                <img id="brand-image" alt="Website Logo" src="../img/logo.png" />
+            </a>
+            <div class="container">
+                <div class="navbar-header">
+                    <a href="/" class="navbar-brand">Home</a>
+                </div>
+
+                <ul class="nav navbar-nav">
+                    <li><a href="/events">Projects</a></li>
+                    <li><a href="/events/create">Create a Project</a></li>
+                    <li><a href="/about">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+<!-- MAIN CONTENT HERE-->
+<%- defineContent('hero')%>
+<main>
+    <div class="container">
+        <%- body %>
+    </div>
+</main>
+    <footer>
+        Awesome Site. Copyright &copy; 2017
+    </footer>
+</body>
+</html>
+</html>
