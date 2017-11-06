@@ -11,6 +11,9 @@
         <tr>
             <th>Project Name</th>
             <th>Description</th>
+            <th>Email</th>
+            <th>Date</th>
+            <th>Category</th>
             <th></th>
         </tr>
     </thead>
@@ -20,6 +23,9 @@
             <tr>
                 <td><%= event.name %></td>
                 <td><%= event.description %></td>
+                <td><%= event.email %></td>
+                <td><%= event.date %></td>
+                <td><%= event.category %></td>
                 <td>
                     <a href="/events/<%= event.slug %>" class="btn btn-sm btn-primary">View</a>
                     <a href="/events/<%= event.slug %>/edit" class="btn btn-sm btn-primary">Edit</a>

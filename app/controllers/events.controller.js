@@ -89,6 +89,8 @@ function processCreate(req, res) {
   req.checkBody('name', 'Name is required.').notEmpty();
   req.checkBody('description', 'Description is required.').notEmpty();
   req.checkBody('email', 'Email is required.').notEmpty();
+  req.checkBody('date', 'Email is required.').notEmpty();
+  req.checkBody('category', 'Category is required.').notEmpty();
 
   // if there are errors, redirect and save errors to flash
   const errors = req.validationErrors();
@@ -101,7 +103,10 @@ function processCreate(req, res) {
   const event = new Event({
     name: req.body.name,
     description: req.body.description,
-    email: req.body.email
+    email: req.body.email,
+    date: req.body.date,
+    category: req.body.category
+
   });
 
   // save event
@@ -137,6 +142,8 @@ function processEdit(req, res) {
   req.checkBody('name', 'Name is required.').notEmpty();
   req.checkBody('description', 'Description is required.').notEmpty();
   req.checkBody('email', 'Email is required.').notEmpty();
+  req.checkBody('date', 'Email is required.').notEmpty();
+  req.checkBody('category', 'Category is required.').notEmpty();
 
   // if there are errors, redirect and save errors to flash
   const errors = req.validationErrors();
@@ -151,6 +158,8 @@ function processEdit(req, res) {
     event.name        = req.body.name;
     event.description = req.body.description;
     event.email = req.body.email;
+    event.date = req.body.date;
+    event.category = req.body.category;
 
     event.save((err) => {
       if (err)

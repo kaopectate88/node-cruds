@@ -25,10 +25,58 @@
                 <textarea name="description" rows="5" class="form-control"></textarea>
             </div>
 
-            <div class="form-group">
-                <label>email</label>
-                <textarea name="email" class="form-control"></textarea>
-            </div>
+
+        <div class="form-group text-left">
+          <label>Email</label>
+          <input type="text" name="email" class="form-control">
+        </div>
+
+        <div class="form-group text-left">
+          <label>Due Date</label>
+          <input type="date" name="date" class="form-control">
+        </div>
+        
+        <div class="form-group text-left" >
+          <label>Category:    </label>
+          <select name="category"> 
+           <option value="Math">Math</option>
+           <option value="Biology">Biology</option>
+           <option value="History">History</option>
+           <option value="English">English</option>
+          </select>
+        </div>
+
+
+        <div class="form-group text-left">
+          <label>Type:    </label>
+          <select >
+           <option value="Research Paper">Research Paper</option>
+           <option value="Lab">Lab</option>
+           <option value="Module">Module</option>
+           <option value="Test">Test</option>
+          </select>
+        </div>
+
+        <div class="form-group text-left">
+          <label>Solution Format:   </label>
+          <select>
+           <option value="Word/PDF">Word/PDF</option>
+           <option value="Online Course">Online Course</option>
+          </select>
+        </div>
+
+        <div class="form-group text-left">
+          <label>Detailed Description</label>
+          <input type="text" name="message" class="form-control">
+        </div>
+
+        <div class="form-group text-left">
+          <label>Upload Files:</label>
+          <input type="file" name="fileToUpLoad" id="fileToUpLoad">
+          
+
+        </div>
+
 
             <div class="form-group">
                 <button type="submit" class="btn btn-success btn-lg">Create</button>
